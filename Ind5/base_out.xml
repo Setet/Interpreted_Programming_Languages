@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<catalog>
+        <gallery id="1">
+            <id>4</id>
+            <name>Krasnodar gallery</name>
+            <id_author>1</id_author>
+            <genre>Self-portrait</genre>
+            <id_pub>1</id_pub>
+            <publication>13-02-2000</publication>
+        </gallery>
+        <gallery id="2">
+            <id>5</id>
+            <name>New-York gallery</name>
+            <id_author>2</id_author>
+            <genre>Tragedy</genre>
+            <id_pub>2</id_pub>
+            <publication>01-02-1921</publication>
+        </gallery>
+        <gallery id="3">
+            <id>6</id>
+            <name>Argentin-gallery</name>
+            <id_author>3</id_author>
+            <genre>Self-portrait</genre>
+            <id_pub>3</id_pub>
+            <publication>28-04-1984</publication>
+        </gallery>
+</catalog>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+MainWindow
+{% endblock %}
+
+{% block content %}
+<h4>Что мне делать?</h4>
+<ul>
+    <li><a href="/getInfo">-Получить инфу о БД</a></li>
+    <li><a href="/InsertFolder/insert_author">-Добавить писателя</a></li>
+    <li><a href="/EditFolder/edit_author">-Изменить писателя</a></li>
+    <li><a href="/InsertFolder/insert_picture">-Добавить картину</a></li>
+    <li><a href="/EditFolder/edit_picture">-Изменить картину</a></li>
+    <li><a href="/InsertFolder/insert_gallery">-Добавить галерею</a></li>
+    <li><a href="/EditFolder/edit_gallery">-Изменить галерею</a></li>
+
+</ul>
+{% endblock %}

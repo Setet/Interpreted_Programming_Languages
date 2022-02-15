@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ title }}
+Change
+{% endblock %}
+
+{% block content %}
+<h3>Author</h3>
+<table border="1" width="100%">
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Pseudonym</th>
+        <th>Date Birth</th>
+    </tr>
+    {% for el in dataAuthor %}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.first_name }}</th>
+        <th>{{ el.second_name}}</th>
+        <th>{{ el.pseudonym}}</th>
+        <th>{{ el.date_birth}}</th>
+        <th><a href="editAuthor/{{el.id}}">Изменить</a> | <a href="deleteAuthor/{{el.id}}">Уничтожить</a></th>
+    </tr>
+    {%endfor%}
+</table>
+{% endblock %}

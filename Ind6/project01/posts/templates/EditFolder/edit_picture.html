@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+Insert
+{% endblock %}
+{% block content %}
+<h5>Change</h5>
+<form method="post">
+    {% csrf_token %}
+    <tr>
+    <th><label for="id_name">Name:</label></th>
+    <td><input type="text" name="name" value="{{dataPicture.name}}" required id="id_name"></td>
+  </tr>
+  <tr>
+    <th><label for="id_id_author">Author:</label></th>
+    <td><input type="text" name="id_author" value="{{dataPicture.id_author}}" required id="id_id_author"></td>
+  </tr>
+  <tr>
+    <th><label for="id_genre">Genre:</label></th>
+    <td><input type="text" name="genre" value="{{dataPicture.genre}}" required id="id_genre"></td>
+  </tr>
+    <tr>
+    <th><label for="id_id_gallery">Gallery:</label></th>
+    <td><input type="text" name="id_gallery" value="{{dataPicture.id_gallery}}" required id="id_id_gallery"></td>
+  </tr>
+  <tr>
+    <th><label for="id_timestamp">Timestamp:</label></th>
+    <td><input type="text" name="timestamp" value="{{dataPicture.timestamp}}" required id="id_timestamp"></td>
+  </tr><br/>
+    <button type="submit">Add</button>
+</form>
+{% endblock %}

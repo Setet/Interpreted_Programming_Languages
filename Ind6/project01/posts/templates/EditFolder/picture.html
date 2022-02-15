@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %}
+Change
+{% endblock %}
+
+{% block content %}
+<h3>Picture</h3>
+<table border="1" width="100%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Genre</th>
+        <th>Gallery</th>
+        <th>Timestamp</th>
+    </tr>
+    {%for el in dataPicture%}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.name }}</th>
+        <th>{{ el.id_author }}</th>
+        <th>{{ el.genre }}</th>
+        <th>{{ el.id_gallery }}</th>
+        <th>{{ el.timestamp }}</th>
+        <th><a href="editPicture/{{el.id}}">Изменить</a> | <a href="deletePicture/{{el.id}}">Уничтожить</a></th>
+    </tr>
+    {%endfor%}
+</table>
+{% endblock %}

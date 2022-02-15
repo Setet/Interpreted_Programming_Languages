@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block title %}
+GetInfo
+{% endblock %}
+
+{% block content %}
+<h4>Picture</h4><br/>
+<table border="1" width="100%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Id_author</th>
+        <th>Genre</th>
+        <th>Timestamp</th>
+    </tr>
+    {% for el in dataPicture %}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.name }}</th>
+        <th>{{ el.id_author }}</th>
+        <th>{{ el.genre }}</th>
+        <th>{{ el.timestamp }}</th>
+    </tr>
+    {%endfor%}
+</table>
+<br/>
+<br/>
+<h4>Author</h4><br/>
+<table border="1" width="100%">
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Pseudonym</th>
+        <th>Date Birth</th>
+    </tr>
+    {% for el in dataAuthor %}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.first_name }}</th>
+        <th>{{ el.second_name}}</th>
+        <th>{{ el.pseudonym}}</th>
+        <th>{{ el.date_birth}}</th>
+    </tr>
+    {% endfor %}
+</table>
+<br/>
+<br/>
+<h4>Gallery</h4><br/>
+<table border="1" width="100%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    {% for el in dataGallery %}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.name }}</th>
+        <th>{{ el.address}}</th>
+    </tr>
+    {% endfor %}
+</table>
+<br/>
+<br/>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ title }}
+Change
+{% endblock %}
+
+{% block content %}
+<h3>Gallery</h3>
+<table border="1" width="100%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+    </tr>
+    {% for el in dataGallery %}
+    <tr>
+        <th>{{ el.id }}</th>
+        <th>{{ el.name }}</th>
+        <th>{{ el.address}}</th>
+        <th><a href="editGallery/{{el.id}}">Изменить</a> | <a href="deleteGallery/{{el.id}}">Уничтожить</a></th>
+    </tr>
+    {%endfor%}
+</table>
+{% endblock %}

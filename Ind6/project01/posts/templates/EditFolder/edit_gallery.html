@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ title }}
+Edit
+{% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <tr>
+        <th><label for="id_name">Name:</label></th>
+        <td><input type="text" name="name" value="{{dataGallery.name}}" required id="id_name"></td>
+    </tr>
+    <tr>
+        <th><label for="id_address">Address:</label></th>
+        <td><input type="text" name="address" value="{{dataGallery.address}}" required id="id_address"></td>
+    </tr>
+    <br/>
+    <button type="submit">Add</button>
+</form>
+{% endblock %}
